@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "name": "homepage",
+  "description": "Covid-19 - Covid-19 reintegration and lockdown prevention service",
+  "version": "0.0.1",
+  "author": "Marcin Czenko <marcin@everydayproductive.com>",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identity-box/covid-19.git"
+  },
+  "dependencies": {
+    "@confluenza/gatsby-theme-confluenza": "^1.0.22",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@identity-box/idbox-react-ui": "^0.1.29-alpha.2",
+    "@identity-box/telepath": "^0.1.29-alpha.2",
+    "@react-frontend-developer/react-layout-helpers": "^1.0.22",
+    "base64url": "^3.0.1",
+    "gatsby": "^2.20.2",
+    "gatsby-plugin-catch-links": "^2.2.0",
+    "gatsby-plugin-emotion": "^4.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "react-media": "^1.9.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "tweetnacl": "^1.0.3"
+  },
+  "keywords": [
+    "gatsby",
+    "confluenza",
+    "markdown"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "now-build": "yarn build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint-config-react-app": "^5.2.1",
+    "gatsby-cli": "^2.11.0",
+    "gatsby-plugin-root-import": "^2.0.5"
+  }
+}

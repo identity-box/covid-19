@@ -1,0 +1,43 @@
+{
+  "name": "@identity-box/covid-19-api",
+  "private": false,
+  "version": "0.0.1",
+  "description": "COVID-19 API service",
+  "bin": {
+    "covid-19-api": "./index.js",
+    "covid-19-api-cjs": "./index-cjs.js",
+    "setup": "./setup.sh"
+  },
+  "files": [
+    "src",
+    "ecosystem.config.js",
+    "index.js",
+    "index-cjs.js",
+    "setup.sh"
+  ],
+  "keywords": [
+    "git",
+    "github"
+  ],
+  "author": "Marcin Czenko",
+  "license": "ISC",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@identity-box/utils": "^0.1.29-alpha.2",
+    "@react-frontend-developer/buffers": "^1.0.21",
+    "base64url": "^3.0.1",
+    "commander": "^5.0.0",
+    "esm": "^3.2.25",
+    "glob": "^7.1.6",
+    "ldapjs": "^1.0.2",
+    "tweetnacl": "^1.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
+  }
+}

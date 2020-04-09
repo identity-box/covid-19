@@ -1,0 +1,1 @@
+export { CovidAPI } from './CovidAPI'
