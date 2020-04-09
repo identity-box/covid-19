@@ -1,7 +1,7 @@
 {
   "name": "@identity-box/covid-19-api",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.0",
   "description": "COVID-19 API service",
   "bin": {
     "covid-19-api": "./index.js",
