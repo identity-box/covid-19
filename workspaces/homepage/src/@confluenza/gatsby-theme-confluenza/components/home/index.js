@@ -11,7 +11,7 @@ const Wrapper = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   width: '100vw',
-  backgroundColor: 'black'
+  backgroundColor: 'white'
 })
 
 const Home = ({ children }) => (
@@ -20,7 +20,7 @@ const Home = ({ children }) => (
       'html,body': {
         fontSize: '14px',
         lineHeight: '1.4285em',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         margin: 0,
         padding: 0,
         boxSizing: 'border-box'
