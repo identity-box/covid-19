@@ -24,17 +24,19 @@ const Input = styled.input({
 const DarkInput = styled.input({
   fontFamily: '"Roboto Mono", monospace',
   fontSize: '0.9rem',
+  lineHeight: '0.9rem',
   width: '100%',
   backgroundColor: 'black',
   color: 'white',
   borderRadius: '20px',
-  border: '1px solid white',
+  border: '1px solid black',
   padding: '15px',
   resize: 'none',
   outline: 'none',
-  transition: 'border-color 0.2s ease-in-out 0s',
+  transition: 'all 0.2s ease-in-out 0s',
   ':focus': {
-    borderColor: '#ceaa00',
+    borderColor: '#092C3E',
+    backgroundColor: '#092C3E',
     outline: 'none'
   },
   '::selection': {

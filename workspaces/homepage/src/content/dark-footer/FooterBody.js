@@ -1,7 +1,7 @@
 import React from 'react'
 import Media from 'react-media'
 import { getImage } from 'src/assets'
-import { MenuLink } from 'src/components/ui-blocks'
+import { DarkMenuLink } from 'src/components/ui-blocks'
 
 import { FooterRow } from './FooterRow'
 import { FooterMenu } from './FooterMenu'
@@ -20,7 +20,7 @@ const FooterBody = ({ data }) => (
         alignSelf: 'flex-start'
       }}
     >
-      <MenuLink to='/welcome-to-covid-19'>About</MenuLink>
+      <DarkMenuLink to='/welcome-to-covid-19'>About</DarkMenuLink>
     </FooterMenu>
     <FooterMenu
       title='Documentation' css={{
@@ -30,8 +30,8 @@ const FooterBody = ({ data }) => (
         }
       }}
     >
-      <MenuLink to='/services/covid-19-api'>Services</MenuLink>
-      <MenuLink to='/developers/contributing'>Contributing</MenuLink>
+      <DarkMenuLink to='/services/covid-19-api'>Services</DarkMenuLink>
+      <DarkMenuLink to='/developers/contributing'>Contributing</DarkMenuLink>
     </FooterMenu>
     <Media
       query='(min-width: 800px)' render={() => (

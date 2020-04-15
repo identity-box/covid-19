@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { LoginForm } from 'src/components/login'
+import { DarkLoginForm } from 'src/components/dark-login'
 
 import { IdAppConnect, RegisterDIDWithCovid, LoginWithIdentityBox, NotThisTime, EnjoyCovid } from 'src/components/covid'
 
@@ -12,7 +12,7 @@ const Stages = Object.freeze({
   Enjoy: 'Enjoy COVID-19!'
 })
 
-const Box1Content1 = ({ data }) => {
+const Box2Content1 = ({ data }) => {
   const [workflow, setWorkflow] = useState(Stages.Connect)
   const [telepathChannel, setTelepathChannel] = useState(undefined)
 
@@ -40,7 +40,7 @@ const Box1Content1 = ({ data }) => {
   const renderConnect = () => {
     return (
       <>
-        <LoginForm onLoggedIn={onLoggedIn} data={data} />
+        <DarkLoginForm onLoggedIn={onLoggedIn} data={data} />
         <IdAppConnect onConnected={onLoginWithIdentityBox} />
       </>
     )
@@ -128,4 +128,4 @@ const Box1Content1 = ({ data }) => {
   }
 }
 
-export { Box1Content1 }
+export { Box2Content1 }

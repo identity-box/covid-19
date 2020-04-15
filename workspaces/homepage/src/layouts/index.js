@@ -6,7 +6,7 @@ import Layout from '@confluenza/gatsby-theme-confluenza/src/layouts'
 import Home from '@confluenza/gatsby-theme-confluenza/src/components/home'
 
 const CovidLayout = ({ location, children }) => {
-  if (location.pathname === withPrefix('/login')) {
+  if (location.pathname === withPrefix('/pros')) {
     return (
       <Home>
         {children}

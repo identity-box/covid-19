@@ -7,7 +7,7 @@ import { UserPassword } from './UserPassword'
 import { Wrapper } from './ui'
 import { InfoBox, Red, Blue, MrSpacer } from 'src/components/ui'
 
-const LoginFormContent = ({ data, onLoggedIn }) => {
+const LoginForm = ({ data, onLoggedIn }) => {
   const [userName, setUserName] = useState('')
   const [userPassword, setUserPassword] = useState('')
   const [telepathProvider, setTelepathProvider] = useState(undefined)
@@ -95,4 +95,4 @@ const LoginFormContent = ({ data, onLoggedIn }) => {
   )
 }
 
-export { LoginFormContent }
+export { LoginForm }

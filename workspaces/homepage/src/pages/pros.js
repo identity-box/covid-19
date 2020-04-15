@@ -3,13 +3,14 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import { useUnusualReloader } from 'src/hooks'
-import { Header } from 'src/components/header'
-import { Footer } from 'src/content'
-import { LoginForm } from 'src/components/login'
+import { DarkHeader } from 'src/components/header'
+import { Box2, DarkFooter } from 'src/content'
 
 import { BodyFrame } from 'src/components/ui-blocks'
 
-const Login = ({ data, location }) => {
+const Pros = ({ data, location }) => {
+  console.log('Welcome to COVID-19!')
+
   const onReady = useCallback(() => {
     setTimeout(() => {
       setVisibility('visible')
@@ -26,14 +27,14 @@ const Login = ({ data, location }) => {
 
   return (
     <>
-      <Helmet title='COVID-19 - Login'>
+      <Helmet title='COVID-19 - Care Professionals'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap' rel='stylesheet' />
       </Helmet>
-      <Header />
-      <BodyFrame css={{ visibility, paddingTop: '80px' }}>
-        <LoginForm />
-        <Footer data={data} />
+      <DarkHeader />
+      <BodyFrame css={{ visibility, paddingTop: '100px' }}>
+        <Box2 data={data} />
+        <DarkFooter data={data} />
       </BodyFrame>
     </>
   )
@@ -52,4 +53,4 @@ export const query = graphql`
   }
 `
 
-export default Login
+export default Pros
