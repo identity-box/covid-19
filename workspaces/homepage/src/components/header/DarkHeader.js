@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { navigate } from 'gatsby'
 import headerLogo from 'src/images/CovidFooterGraphic.png'
 
-import { MenuLinkExternal } from 'src/components/ui-blocks'
+import { DarkMenuLinkExternal } from 'src/components/ui-blocks'
 
 const Logo = styled.div({
   display: 'flex',
@@ -40,8 +41,8 @@ const HyperWrapper = styled.div({
   top: 0,
   zIndex: 0,
   width: '100%',
-  backgroundImage: 'linear-gradient(#2F2E2D, #000000)',
-  opacity: '0.84'
+  backgroundImage: 'linear-gradient(#000000, #092C3E)',
+  opacity: 1
 })
 
 const Wrapper = styled.div({
@@ -49,19 +50,21 @@ const Wrapper = styled.div({
   maxWidth: '1200px',
   display: 'flex',
   flexWrap: 'wrap',
-  backgroundImage: 'linear-gradient(#2F2E2D, #000000)',
   justifyContent: 'space-between'
 })
 
 const DarkHeader = () => (
   <HyperWrapper>
     <Wrapper>
-      <Logo>
+      <Logo
+        onClick={() => navigate('/')}
+        css={{ cursor: 'pointer' }}
+      >
         <LogoImg alt='IdBox logo' src={headerLogo} width='52px' />
         <LogoText>COVID-19</LogoText>
       </Logo>
       <Menu>
-        <MenuLinkExternal href='https://github.com/identity-box/covid-19' target='_blank'>Github</MenuLinkExternal>
+        <DarkMenuLinkExternal href='https://github.com/identity-box/covid-19' target='_blank'>Github</DarkMenuLinkExternal>
         {/* <MenuLinkExternal href='https://twitter.com/covid-19-identity-box' target='_blank'>Twitter</MenuLinkExternal> */}
         {/* <MenuLink
         css={{

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import headerLogo from 'src/images/CovidFooterGraphic.png'
 
-import { MenuLinkExternal } from 'src/components/ui-blocks'
+import { MenuLinkExternal, MenuLink } from 'src/components/ui-blocks'
 
 const Logo = styled.div({
   display: 'flex',
@@ -62,6 +62,7 @@ const Header = () => (
         <LogoText>COVID-19</LogoText>
       </Logo>
       <Menu>
+        <MenuLink to='/pros' target='_blank'>Care Proffesionals</MenuLink>
         <MenuLinkExternal href='https://github.com/identity-box/covid-19' target='_blank'>Github</MenuLinkExternal>
         {/* <MenuLinkExternal href='https://twitter.com/covid-19-identity-box' target='_blank'>Twitter</MenuLinkExternal> */}
         {/* <MenuLink

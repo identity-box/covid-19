@@ -14,13 +14,13 @@ const MenuLinkExternal = styled.a({
 
 const DarkMenuLinkExternal = styled.a({
   display: 'inline-block',
-  color: '#D20DE7',
+  color: 'white',
   fontFamily: 'Roboto Mono, monospace',
   margin: '5px 20px',
   fontSize: '10pt',
   '&:hover': {
     color: 'white',
-    textDecoration: 'none'
+    textDecoration: 'underline'
   }
 })
 
