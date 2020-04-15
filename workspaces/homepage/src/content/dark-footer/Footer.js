@@ -9,7 +9,7 @@ const Footer = ({ data }) => (
   <Box backgroundStyles={{
     position: 'relative',
     paddingBottom: 0,
-    backgroundImage: 'linear-gradient(#555, #000000)',
+    backgroundImage: 'linear-gradient(#092C3E, #000000)',
     '@media (max-width: 568px)': {
       paddingTop: '20px'
     }

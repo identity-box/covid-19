@@ -19,7 +19,7 @@ const LogoImg = styled.img({
 const LogoText = styled.p({
   display: 'inline-block',
   margin: 0,
-  color: 'black',
+  color: 'white',
   fontFamily: 'Roboto Mono, monospace',
   fontSize: '10pt',
   marginLeft: '20px',
@@ -40,6 +40,7 @@ const HyperWrapper = styled.div({
   top: 0,
   zIndex: 0,
   width: '100%',
+  backgroundImage: 'linear-gradient(#2F2E2D, #000000)',
   opacity: '0.84'
 })
 
@@ -48,16 +49,14 @@ const Wrapper = styled.div({
   maxWidth: '1200px',
   display: 'flex',
   flexWrap: 'wrap',
+  backgroundImage: 'linear-gradient(#2F2E2D, #000000)',
   justifyContent: 'space-between'
 })
 
-const Header = () => (
+const DarkHeader = () => (
   <HyperWrapper>
     <Wrapper>
-      <Logo
-        onClick={() => window.location.reload()}
-        css={{ cursor: 'pointer' }}
-      >
+      <Logo>
         <LogoImg alt='IdBox logo' src={headerLogo} width='52px' />
         <LogoText>COVID-19</LogoText>
       </Logo>
@@ -75,4 +74,4 @@ const Header = () => (
   </HyperWrapper>
 )
 
-export { Header }
+export { DarkHeader }
