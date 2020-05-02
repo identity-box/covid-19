@@ -1,13 +1,16 @@
 import { Authenticator } from './Authenticator'
+import { AuthenticatorCP } from './AuthenticatorCP'
 import { DIDs } from './DIDs'
 
 class Dispatcher {
   dids
   authenticator
+  authenticatorCP
 
   constructor () {
     this.dids = new DIDs()
     this.authenticator = new Authenticator()
+    this.authenticatorCP = new AuthenticatorCP()
   }
 
   dispatch = ({ method, params }) => {
@@ -16,8 +19,14 @@ class Dispatcher {
     console.log('method:', method)
     console.log('params:', params)
     switch (method) {
-      case 'authenticate-code1':
+      case 'authenticate':
         return this.authenticator.authenticate(params[0])
+      case 'get-authenticated-users':
+        return this.authenticator.getAuthenticatedUsers()
+      case 'authenticate-cp':
+        return this.authenticatorCP.authenticate(params[0])
+      case 'get-authenticated-cp-users':
+        return this.authenticatorCP.getAuthenticatedUsers()
       case 'register-did':
         return this.dids.registerDid(method, params[0].did)
       case 'check-did':

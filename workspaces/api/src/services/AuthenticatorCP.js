@@ -2,11 +2,11 @@ import { StateSerializer } from '@identity-box/utils'
 
 import path from 'path'
 
-class Authenticator {
+class AuthenticatorCP {
   authenticatedUsers = []
 
   constructor ({ serializerFilePath } = {}) {
-    const filePath = serializerFilePath || path.resolve(process.cwd(), 'AuthenticatedUsers.json')
+    const filePath = serializerFilePath || path.resolve(process.cwd(), 'AuthenticatedUsersCP.json')
     this.stateSerializer = new StateSerializer(filePath)
     this.authenticatedUsers = this.stateSerializer.read() || []
   }
@@ -21,14 +21,14 @@ class Authenticator {
       this.stateSerializer.write(this.authenticatedUsers)
     }
     return {
-      method: 'authenticate-response',
+      method: 'authenticate-cp-response',
       params: []
     }
   }
 
   getAuthenticatedUsers = () => {
     return {
-      method: 'get-authenticated-users-response',
+      method: 'get-authenticated-cp-users-response',
       params: [{
         authenticatedUsers: this.authenticatedUsers
       }]
@@ -36,4 +36,4 @@ class Authenticator {
   }
 }
 
-export { Authenticator }
+export { AuthenticatorCP }
