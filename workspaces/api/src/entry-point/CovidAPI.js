@@ -1,4 +1,4 @@
-import { CovidAPIService } from '../services'
+import { CovidAPIService, Authenticator } from '../services'
 import { ServiceProxy, StateSerializer } from '@identity-box/utils'
 
 import path from 'path'
@@ -6,22 +6,17 @@ import path from 'path'
 class Dispatcher {
   dids = []
   stateSerializer
+  authenticator
 
   constructor ({ serializerFilePath } = {}) {
     const filePath = serializerFilePath || path.resolve(process.cwd(), 'DIDs.json')
     this.stateSerializer = new StateSerializer(filePath)
     this.dids = this.stateSerializer.read() || []
+    this.authenticator = new Authenticator()
   }
 
   isRegistred = did => {
     return this.dids.includes(did)
-  }
-
-  authenticateCODE1 = (method, { userName, userPassword }) => {
-    return {
-      method: `${method}-response`,
-      params: []
-    }
   }
 
   registerDid = (method, did) => {
@@ -51,7 +46,7 @@ class Dispatcher {
     console.log('params:', params)
     switch (method) {
       case 'authenticate-code1':
-        return this.authenticateCODE1(method, params[0])
+        return this.authenticator.authenticate(params[0])
       case 'register-did':
         return this.registerDid(method, params[0].did)
       case 'check-did':
