@@ -1,7 +1,16 @@
 import React, { useState, useCallback } from 'react'
 import { DarkLoginForm } from 'src/components/dark-login'
 
-import { IdAppConnect, RegisterDIDWithCovid, LoginWithIdentityBox, NotThisTime, EnjoyCovid } from 'src/components/covid'
+import {
+  IdAppConnect,
+  RegisterDIDWithCovid,
+  LoginWithIdentityBox,
+  NotThisTime
+} from 'src/components/covid'
+
+import {
+  CreateCovidAttestation
+} from 'src/components/care-pros'
 
 const Stages = Object.freeze({
   Connect: 'connecting',
@@ -96,7 +105,7 @@ const Box2Content1 = ({ data }) => {
   const renderEnjoyCovid = () => {
     return (
       <>
-        <EnjoyCovid />
+        <CreateCovidAttestation />
       </>
     )
   }

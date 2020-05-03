@@ -16,7 +16,7 @@ const LoginForm = ({ data, onLoggedIn }) => {
     const message = {
       jsonrpc: '2.0',
       servicePath: 'covid-19.authentication-service',
-      method: 'authenticate-code1',
+      method: 'authenticate-cp',
       params: [{
         userName,
         userPassword
@@ -46,7 +46,7 @@ const LoginForm = ({ data, onLoggedIn }) => {
 
   const onMessage = useCallback(message => {
     console.log(message)
-    if (message.method === 'authenticate-code1-response') {
+    if (message.method === 'authenticate-cp-response') {
       onLoggedIn && onLoggedIn()
     }
   }, [onLoggedIn])
