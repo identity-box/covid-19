@@ -107,7 +107,7 @@ const RegisterDIDWithCovid = ({ onDone, telepathChannel }) => {
           </InfoBox>
           <MrSpacer space='50px' />
           <InfoBox>
-            Next time you can use this identity to access COVID-19 <Blue>without</Blue> having to use your CODE1 credentials.
+            Next time you can use this identity to access COVID-19 <Blue>without</Blue> having to use your hospital credentials.
           </InfoBox>
           <MrSpacer space='50px' />
           <Button

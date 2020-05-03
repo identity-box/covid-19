@@ -15,7 +15,7 @@ class Authenticator {
     return this.authenticatedUsers.includes(userName)
   }
 
-  authenticate = (userName, password) => {
+  authenticate = ({ userName, password }) => {
     if (!this.isAuthenticated(userName)) {
       this.authenticatedUsers.push(userName)
       this.stateSerializer.write(this.authenticatedUsers)
